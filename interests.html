@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap links -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="main.css">
+    <script src="lib/ImageScroll.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+
+
+
+</style>
+</head>
+<body>
+
+       <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">BIS 1 Student</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html" role="button" aria-haspopup="true" aria-expanded="false">
+          Home
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          CV
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="AboutMe.html">About Me</a>
+          <a class="dropdown-item" href="Experience.html">Experience</a>
+          <a class="dropdown-item" href="Education.html">Education</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="Awards.html">Awards</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="interests.html" role="button" aria-haspopup="true" aria-expanded="false">
+          Interests
+        </a>
+      </li>
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Strategic Consulting Services
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="AboutConsulting.html">About Consulting</a>
+          <a class="dropdown-item" href="Ebus1.html">Services</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<h1>My Interests</h1>
+<h2>Sport</h2>
+<p>
+  My interests include several sports, such as rowing and rockclimbing. I have been rowing competively for several years, attending a number of regattas across the country. I also recently returned to rockclimbing since starting college. I used to rockclimb when I was younger. Rockclimbing is soon to be an olympic sport, with several events in the Tokyo 2020 Olympics. I will be looking forward to watching the rowing and rockclimbing events this Summer.
+</p>
+<h2>Travel</h2>
+<p>Travelling has always been a family affair, with all of us going somewhere for two weeks every Summer. I have been to many places, especially in the US. But one of my favourite places was Vancouver Island in Canada. Vancouver Island, off Canada’s Pacific Coast, is known for its mild climate and thriving arts community. We went kayaking and hiking in many places around the island.</p>
+
+<div id="jquery-script-menu">
+<div class="jquery-script-center">
+</div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<div id="container"> <span class="title">My Interests</span>
+  <ul id="imgs">
+    <li><img src="images/california.jpg" alt="" /></li>
+    <li><img src="images/rowing1.jpg" alt="" /></li>
+    <li><img src="images/rowing2.jpg" alt="" /></li>
+    <li><img src="images/muralwall.jpg" alt="" /></li>
+    <li><img src="images/rockclimbing.jpg" alt="" /></li>
+    <li><img src="images/road.jpg" alt="" /></li>
+    <li><img src="images/biglake.jpg" alt="" /></li>
+  </ul>
+  <span class="title"></span> </div>
+<div id="controler"> </div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
+<script type="text/javascript" src="ImageScroll.js"></script> 
+<script type="text/javascript">
+
+  $('#imgs').imageScroll({
+    orientation:"left",
+    speed:600,
+    interval:1000,
+    hoverPause:true,
+  });
+
+  </script>
+
+<script src="jquery-3.4.1.min.js"></script>
+
+</body>
+</html>

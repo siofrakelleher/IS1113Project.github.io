@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- My CSS -->
+    <link rel="stylesheet" href="main.css">
+    
+    <title>Services</title>
+  </head>
+  <body>
+
+       <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">BIS 1 Student</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html" role="button" aria-haspopup="true" aria-expanded="false">
+          Home
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          CV
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="AboutMe.html">About Me</a>
+          <a class="dropdown-item" href="Experience.html">Experience</a>
+          <a class="dropdown-item" href="Education.html">Education</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="Awards.html">Awards</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="interests.html" role="button" aria-haspopup="true" aria-expanded="false">
+          Interests
+        </a>
+      </li>
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Strategic Consulting Services
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="AboutConsulting.html">About Consulting</a>
+          <a class="dropdown-item" href="Ebus1.html">Services</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<h1>Services</h1>
+
+<div id="services" class="calculate">
+  <p>Please select which services you want:</p>
+<input type="radio" name="service" id="rb1" value="1000" checked>
+<label for="multiexperience">Multiexperience @ €1000</label>
+<br>
+<input type="radio" name="service" id="rb2" value="2000">
+<label for="distributed cloud">Distributed cloud @ €2000</label>
+<br>
+<input type="radio" name="service" id="rb3" value="1500">
+<label for="hyperautomation">Hyperautomation @ €1500</label>
+
+</div>
+
+<div class="calculate">
+  <p id="subtotal">Subtotal:</p>
+  <p id="discount">Discount (-5%):</p>
+  <p id="vat">VAT (+20%):</p>
+  <p id="total">Total:</p>
+  <br>
+  <button onclick="calcSub()">Calculate Cost</button>
+  <button onclick="clearChoice()">Clear Choice</button>
+</div>
+
+<!--function for calculating subtotal-->
+<script type="text/javascript">function calcSub() {
+//alert("CalcSub got called!")
+//establish which radio button is selected
+if (document.getElementById('rb1').checked) argSelection = document.getElementById('rb1').value;
+if (document.getElementById('rb2').checked) argSelection = document.getElementById('rb2').value;
+if (document.getElementById('rb3').checked) argSelection = document.getElementById('rb3').value;
+//Display argSelection to screen for verification
+calcVatTotal(argSelection);
+}
+
+//function for calculating VAT, discount total
+function calcVatTotal(parmSelection) {
+var discount = parmSelection * 0.05;
+var vat = (parmSelection - discount) * 0.2;
+var total = parmSelection - discount + vat;
+calDisp(parmSelection, discount, vat, total);
+}
+
+//function for displaying all totals
+function calDisp(parmsubTotal, parmdiscountAmt, parmvatAmt, parmtotalPrice) {
+document.getElementById('subtotal').innerHTML = "Subtotal: €"+ parmsubTotal;
+document.getElementById('discount').innerHTML = "Discount (-5%): €"+ parmdiscountAmt;
+document.getElementById('vat').innerHTML = "VAT (+20%): €"+ parmvatAmt;
+document.getElementById('total').innerHTML = "Total: €"+ parmtotalPrice;
+}
+
+//function for displaying all totals
+function clearChoice() {
+document.getElementById('subtotal').innerHTML = "Subtotal:";
+document.getElementById('discount').innerHTML = "Discount (-5%):";
+document.getElementById('vat').innerHTML = "VAT (+20%):";
+document.getElementById('total').innerHTML = "Total:";
+}
+
+</script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
