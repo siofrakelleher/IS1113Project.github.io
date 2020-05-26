@@ -1,0 +1,63 @@
+h1 {
+	color: darkcyan;
+}
+h3, h2 {
+	color: #00e6e6;
+}
+dir {
+	font-style: italic;
+	font-size: 18px;
+}
+.calculate {
+  padding-left: 10px;
+}
+#container {
+  overflow: hidden;
+  width: auto;
+  height: 400px;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top:150px;
+}
+
+#imgs {
+  display: block;
+  padding: 0;
+  width: auto;
+}
+
+#imgs li {
+  padding-right: 10px;
+  display: inline-block;
+ *display:inline;
+}
+
+#imgs img {
+  width: auto;
+  height: 400px;
+}
+
+.title {
+  display: block;
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background: #ddd;
+}
+.thumbnail {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    font-weight: bold;
+    font-family: Helvetica Neue;
+    font-size: 100px;
+    color: white;
+}
